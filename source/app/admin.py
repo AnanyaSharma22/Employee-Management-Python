@@ -36,6 +36,12 @@ class CustomUserAdmin(admin.ModelAdmin):
 
     actions = ['make_active', 'make_inactive', ]
     search_fields = ['email', 'firstname', 'lastname']
+    
+    def save_model(self, request, obj, form, change):
+        obj.save()
+        password = form.cleaned_data.get('password')
+        obj.set_password(password)
+        obj.save()
 
 class EmployeeAdmin(admin.ModelAdmin):
     """
