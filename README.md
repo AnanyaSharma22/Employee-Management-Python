@@ -23,3 +23,5 @@ Steps To Setup The Project:
 8. In admin, go to managers tab and create a user with checking it's is_appuser and is_active checkbox. This will an appuser.
 9. Now, go to applications tab and create an application with the name 'EMPLOYEE-MANAGEMENT' and select the user which you have created in the above step, cleint type 'confidential' and grant-type 'resource owner password based'.
 10. Now, we need to set these credentials in Angular project environment.ts file.
+
+In your browser, visit http://localhost:8000 to view, access and test the employee management application.
